@@ -20,7 +20,7 @@ Assignment1 asgmt = new Assignment1();
 asgmt.populateAllowanceStatus(allowances);
 
 //UC3
-Map<Id, Account> accounts = new Map<Id, Account>([SELECT Id, AccountNumber FROM Account]);
+Map<Id, Account> accounts = new Map<Id, Account>([SELECT Name, AccountNumber FROM Account]);
 Assignment1 asgmt = new Assignment1();
 asgmt.updateAccountNumbers(accounts);
 

@@ -16,7 +16,7 @@ public class Car {
     
     //sObject data types
     private Account acc = new Account();    
-    private Payment__c pay = new Payment__c();
+    //private Payment__c pay = new Payment__c();
 
     public Car() {
         
