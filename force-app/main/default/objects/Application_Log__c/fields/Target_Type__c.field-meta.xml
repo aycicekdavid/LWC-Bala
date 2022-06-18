@@ -35,6 +35,11 @@
                 <default>false</default>
                 <label>Integration</label>
             </value>
+            <value>
+                <fullName>Flow</fullName>
+                <default>false</default>
+                <label>Flow</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>
