@@ -7,6 +7,9 @@
         <locationY>455</locationY>
         <actionName>NewOpportunity</actionName>
         <actionType>quickAction</actionType>
+        <faultConnector>
+            <targetReference>Create_Log</targetReference>
+        </faultConnector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>AccountId</name>
@@ -105,4 +108,35 @@
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
+    <subflows>
+        <name>Create_Log</name>
+        <label>Create Log</label>
+        <locationX>440</locationX>
+        <locationY>575</locationY>
+        <flowName>Create_Log</flowName>
+        <inputAssignments>
+            <name>Message</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Status</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>TargetName</name>
+            <value>
+                <stringValue>High Profile Accounts - New Opportunity</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>TargetType</name>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
 </Flow>
